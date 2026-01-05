@@ -1,34 +1,86 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-const overlay = document.getElementById("overlay");
-let imagenActiva = null;
+  const overlay = document.getElementById("overlay");
+  const modal = document.getElementById("modalImg");
 
-document.querySelectorAll("#FormatoIMG").forEach(img => {
-  img.addEventListener("click", e => {
-    e.stopPropagation();
+  let imagenActual = null;
+  let listaImagenes = [];
+  let indiceActual = 0;
 
-    if (imagenActiva) return;
+  // seleccionar todas las imágenes del álbum
+  listaImagenes = Array.from(document.querySelectorAll('img[id="FormatoIMG"]'));
 
-    imagenActiva = img.parentElement;
+  listaImagenes.forEach((img, index) => {
+    img.style.cursor = "zoom-in";
 
-    imagenActiva.dataset.left = imagenActiva.style.left;
-    imagenActiva.dataset.top = imagenActiva.style.top;
-    imagenActiva.dataset.transform = imagenActiva.style.transform;
-
-    imagenActiva.classList.add("img-focus");
-    overlay.classList.add("activo");
+    img.addEventListener("click", (e) => {
+      e.stopPropagation();
+      abrirModal(index);
+    });
   });
-});
 
-/* Cerrar al tocar fuera */
-overlay.addEventListener("click", () => {
-  if (!imagenActiva) return;
+  function abrirModal(index) {
+    indiceActual = index;
+    modal.innerHTML = "";
 
-  imagenActiva.classList.remove("img-focus");
+    imagenActual = document.createElement("img");
+    imagenActual.src = listaImagenes[indiceActual].src;
+    imagenActual.alt = listaImagenes[indiceActual].alt || "";
 
-  imagenActiva.style.left = imagenActiva.dataset.left;
-  imagenActiva.style.top = imagenActiva.dataset.top;
-  imagenActiva.style.transform = imagenActiva.dataset.transform;
+    modal.appendChild(imagenActual);
 
-  imagenActiva = null;
-  overlay.classList.remove("activo");
+    overlay.classList.add("activo");
+    modal.classList.add("activo");
+  }
+
+  function cerrarModal() {
+    overlay.classList.remove("activo");
+    modal.classList.remove("activo");
+    modal.innerHTML = "";
+    imagenActual = null;
+  }
+
+  function siguiente() {
+    indiceActual = (indiceActual + 1) % listaImagenes.length;
+    imagenActual.src = listaImagenes[indiceActual].src;
+  }
+
+  function anterior() {
+    indiceActual =
+      (indiceActual - 1 + listaImagenes.length) % listaImagenes.length;
+    imagenActual.src = listaImagenes[indiceActual].src;
+  }
+
+  /* ===== EVENTOS ===== */
+
+  overlay.addEventListener("click", cerrarModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") cerrarModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!imagenActual) return;
+
+    if (e.key === "Escape") cerrarModal();
+    if (e.key === "ArrowRight") siguiente();
+    if (e.key === "ArrowLeft") anterior();
+  });
+
+  /* ===== SWIPE (MÓVIL) ===== */
+  let startX = 0;
+
+  modal.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  modal.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? siguiente() : anterior();
+    }
+  });
+
 });
