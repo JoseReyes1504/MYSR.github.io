@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   listaImagenes = Array.from(document.querySelectorAll('img[id="FormatoIMG"]'));
 
   listaImagenes.forEach((img, index) => {
-    img.style.cursor = "zoom-in";
+    img.style.cursor = "Pointer";
 
     img.addEventListener("click", (e) => {
       e.stopPropagation();
