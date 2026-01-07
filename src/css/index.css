@@ -749,3 +749,57 @@
 .music-btn:hover {
     background: #333;
 }
+
+@media (max-width: 768px) {
+
+  /* reduce márgenes raros */
+  .Contenedor,
+  .Contenedor0,
+  .Contenedor1,
+  .Contenedor2,
+  .Contenedor3,
+  .Contenedor4 {
+    margin: 0;
+  }
+
+  /* todos los cuadros más pequeños */
+  .imgM,
+  .imgM0,
+  .imgM1,
+  .imgM2,
+  .imgM3,
+  .imgM4,
+  .imgM5,
+  .imgM6,
+  .imgM7,
+  .imgM01,
+  .imgM001,
+  .imgM02,
+  .imgM03,
+  .imgM12,
+  .imgM21 {
+    width: 42vw !important;
+    height: 30vh !important;
+  }
+
+  /* el "Feliz cumple" */
+  #imgFeliz {
+    width: 70vw;
+    height: auto;
+    right: 10%;
+    top: 2%;
+    transform: rotate(-10deg);
+  }
+
+  /* garabatos más pequeños */
+  #GarabatoC11, #GarabatoC12, #GarabatoC13 {
+    width: 22vw !important;
+  }
+
+  /* botón música un poquito más pequeño */
+  .music-btn{
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
