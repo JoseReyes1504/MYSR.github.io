@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALBUM</title>
     <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="icon" type="image/x-icon" href="/src/img/photo_album_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png">
 </head>
+
 <body>
+<button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+            🔊
+        </button>
+
+        <audio id="music" loop>
+            <source src="src/sound/Nothing's Gonna Hurt You Baby - Cigarettes After Sex.mp3" type="audio/mpeg">
+        </audio>
     <div class="Contenedor">
+        
         <img id="imgFeliz" src="/src/img/FelizCumple.png" alt="FelizCumpleaños">
-        <div class="img1">            
+        <div class="img1">
         </div>
         <div class="imgM">
             <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0062.jpg" alt="MonicaYo">
         </div>
         <div class="imgM0">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA00102.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/MonicaLuces.jpg" alt="MonicaYo">
         </div>
-         <div class="imgM1">
+        <div class="imgM1">
             <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0044.jpg" alt="MonicaYo">
         </div>
 
 
-        <div class="img2">            
+        <div class="img2">
+        </div>
+        <div class="imgM12">
+            <img id="FormatoIMG" src="/src/img/MonicaPelotas.JPEG" alt="MonicaYo">
         </div>
         <div class="imgM2">
             <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0093.jpg" alt="MonicaYo">
@@ -31,57 +45,170 @@
             <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0046.jpg" alt="MonicaYo">
         </div>
     </div>
+    <div class="Contenedor0">
+        <div class="imgM">
+            <img id="FormatoIMG" src="/src/img/MY1.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM0">
+            <img id="FormatoIMG" src="/src/img/MY2.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM1">
+            <img id="FormatoIMG" src="/src/img/MY12.JPEG" alt="MonicaYo">
+        </div>
+
+        <div class="imgM12">
+            <img id="FormatoIMG" src="/src/img/MY4.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM2">
+            <img id="FormatoIMG" src="/src/img/MY5.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM3">
+            <img id="FormatoIMG" src="/src/img/MY6.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM4">
+            <img id="FormatoIMG" src="/src/img/MY7.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM5">
+            <img id="FormatoIMG" src="/src/img/MY9.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM6">
+            <img id="FormatoIMG" src="/src/img/MY10.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM7">
+            <img id="FormatoIMG" src="/src/img/MY11.JPEG" alt="MonicaYo">
+        </div>
+    </div>
     <div class="Contenedor1">
         <div class="imgM01">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0062.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/YoChurro.JPEG" alt="MonicaYo">
         </div>
         <div class="imgM001">
-            <img id="FormatoIMG" src="/src/img/MonicaEnCarro.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0091.jpg" alt="MonicaYo">
         </div>
-         <div class="imgM21">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0091.jpg" alt="Monica">
+        <div class="imgM21">
+            <img id="FormatoIMG" src="/src/img/MonicaChurros2.jpg" alt="Monica">
         </div>
 
         <img id="GarabatoC11" src="/src/img/Churros.png" alt="Churros espanoles">
         <img id="GarabatoC12" src="/src/img/Pajarito.png" alt="Churros espanoles">
         <img id="GarabatoC13" src="/src/img/gatoComiendo.png" alt="Churros espanoles">
-        
+
 
         <div class="imgM02">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0088.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/Churros.JPEG" alt="MonicaYo">
         </div>
         <div class="imgM03">
-            <img id="FormatoIMG" src="/src/img/MonicaYo3.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/MonicaChurros.JPEG" alt="MonicaYo">
+        </div>
+
+         <div class="imgM5">
+            <img id="FormatoIMG" src="/src/img/MonicaCafe.JPEG" alt="MonicaYo">
         </div>
     </div>
     <div class="Contenedor2">
+        <div class="img3">
+        </div>
         <div class="imgM01">
             <img id="FormatoIMG" src="/src/img/Ejercicios.jpg" alt="MonicaYo">
         </div>
         <div class="imgM001">
             <img id="FormatoIMG" src="/src/img/Ejercicios2.jpg" alt="MonicaYo">
         </div>
-         <div class="imgM21">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0091.jpg" alt="Monica">
+        <div class="imgM21">
+            <img id="FormatoIMG" src="/src/img/Ejercicio4.JPEG" alt="Monica">
         </div>
 
         <img id="GarabatoC11" src="/src/img/PajaritoVolando.png" alt="Churros espanoles">
         <img id="GarabatoC12" src="/src/img/img7.png" alt="Churros espanoles">
         <img id="GarabatoC13" src="/src/img/CapibaraCorriendo.png" alt="Churros espanoles">
-        
 
+        <div class="img4">
+        </div>
         <div class="imgM02">
-            <img id="FormatoIMG" src="/src/img/IMG-20250529-WA0088.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/Ejercicio6.JPEG" alt="MonicaYo">
         </div>
         <div class="imgM03">
-            <img id="FormatoIMG" src="/src/img/MonicaYo3.jpg" alt="MonicaYo">
+            <img id="FormatoIMG" src="/src/img/Ejercicio3.JPEG" alt="MonicaYo">
         </div>
     </div>
+    <div class="Contenedor3">
+        <div class="imgM">
+            <img id="FormatoIMG" src="/src/img/MonicaMisquito.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM0">
+            <img id="FormatoIMG" src="/src/img/MonicaVestido2.jpg" alt="MonicaYo">
+        </div>
+        <div class="imgM1">
+            <img id="FormatoIMG" src="/src/img/MonicaPatos.jpg" alt="MonicaYo">
+        </div>
 
-<div id="overlay"></div>
-<div id="modalImg"></div>
+        <div class="imgM12">
+            <img id="FormatoIMG" src="/src/img/MonicaVestido.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM2">
+            <img id="FormatoIMG" src="/src/img/MonicaVestido5.jpg" alt="MonicaYo">
+        </div>
+        <div class="imgM3">
+            <img id="FormatoIMG" src="/src/img/MonicaRisado.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM4">
+            <img id="FormatoIMG" src="/src/img/MonicaCafe.jpg" alt="MonicaYo">
+        </div>
+        <div class="imgM5">
+            <img id="FormatoIMG" src="/src/img/MonicaCarro.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM6">
+            <img id="FormatoIMG" src="/src/img/MonicaHeolicas.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM7">
+            <img id="FormatoIMG" src="/src/img/MonicaEstirada.JPEG" alt="MonicaYo">
+        </div>
+    </div>
+     <div class="Contenedor4">
+        <div class="imgM">
+            <img id="FormatoIMG" src="/src/img/MD.jpg" alt="MonicaYo">
+        </div>
+        <div class="imgM0">
+            <img id="FormatoIMG" src="/src/img/MD2.PNG" alt="MonicaYo">
+        </div>
+        <div class="imgM1">
+            <img id="FormatoIMG" src="/src/img/MD3.JPEG" alt="MonicaYo">
+        </div>
+
+        
+        <img id="GarabatoC11" src="/src/img/28eN.gif" alt="Churros espanoles">
+        <img id="GarabatoC12" src="/src/img/img7.png" alt="Churros espanoles">
+        <img id="GarabatoC13" src="/src/img/CapibaraCorriendo.png" alt="Churros espanoles">
+
+
+        <div class="imgM12">
+            <img id="FormatoIMG" src="/src/img/MD4.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM2">
+            <img id="FormatoIMG" src="/src/img/MD5.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM3">
+            <img id="FormatoIMG" src="/src/img/MD6.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM4">
+            <img id="FormatoIMG" src="/src/img/MD7.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM5">
+            <img id="FormatoIMG" src="/src/img/MD1.PNG" alt="MonicaYo">
+        </div>
+        <!-- <div class="imgM6">
+            <img id="FormatoIMG" src="/src/img/MonicaHeolicas.JPEG" alt="MonicaYo">
+        </div>
+        <div class="imgM7">
+            <img id="FormatoIMG" src="/src/img/MonicaEstirada.JPEG" alt="MonicaYo">
+        </div> -->
+    </div>
+
+    <div id="overlay"></div>
+    <div id="modalImg"></div>
 
 
 </body>
 <script src="../src/js/Album.js"></script>
+
 </html>
